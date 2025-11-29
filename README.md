@@ -34,14 +34,14 @@ src/
 ### 3. Endpoints Principales
 
 #### Pagos
-- `POST /api/payments` - Crea un nuevo pago
-- `POST /api/payments/batch` - Crea multiples pagos
-- `GET /api/payments/:userId` - Obtiene un pago por ID
-- `GET /api/payments/:paymentId` - Obtiene un pago por ID
-- `GET /api/payments/user/:userId` - Lista pagos por usuario
+- `POST /payments` - Crea un nuevo pago
+- `POST /payments/batch` - Crea multiples pagos
+- `GET /payments/:userId` - Obtiene un pago por ID
+- `GET /payments/:paymentId` - Obtiene un pago por ID
+- `GET /payments/user/:userId` - Lista pagos por usuario
 
 #### Documentación
-- `GET /api-docs` - Documentación interactiva
+- `GET /docs` - Documentación interactiva
 
 ### 4. Variables de Entorno
 Crear archivo `.env` en la raíz:

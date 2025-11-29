@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 // Rutas
-app.use('/api/payments', paymentRoutes);
+app.use('/payments', paymentRoutes);
 
 // Ruta de salud
 app.get('/health', (req, res) => {

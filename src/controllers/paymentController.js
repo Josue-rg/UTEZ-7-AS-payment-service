@@ -101,10 +101,11 @@ export const createPayment = async (req, res) => {
       await session.commitTransaction();
       session.endSession();
 
-      // Crear respuesta simplificada
+      // Crear respuesta con el ID del pago
       const response = {
         success: true,
         data: {
+          id: payment._id,
           userId: payment.userId,
           eventId: payment.eventId,
           amount: payment.amount,

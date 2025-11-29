@@ -52,13 +52,13 @@ app.get('/health', (req, res) => {
 });
 
 // Documentación de la API
-app.use('/api-docs', 
+app.use('/docs', 
   swaggerUi.serve, 
   swaggerUi.setup(swaggerSpec, { explorer: true })
 );
 
 // Rutas de la API
-app.use('/api/payments', paymentRoutes);
+app.use('/payments', paymentRoutes);
 
 // Middleware de manejo de errores
 app.use(errorHandler);
@@ -69,7 +69,7 @@ const startServer = async () => {
     await connectDB();
     app.listen(PORT, () => {
       console.log(`Servicio de pagos corriendo en ${PORT}`);
-      console.log(`Documentación de la API disponible en ${PORT}/api-docs`);
+      console.log(`Documentación de la API disponible en ${PORT}/docs`);
     });
   } catch (error) {
     console.error('Error al iniciar el servidor:', error);
